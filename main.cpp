@@ -64,7 +64,7 @@ case 1:
 double v0= 0.0;
 double a= 0.0;
 double t= 0.0;
-double v= 0,0; 
+double v= 0.0; 
 cout<<"enter v0, a and t \n";
 v0= validateDouble(v0);
 a= validateDouble(a);
@@ -76,17 +76,33 @@ break;
 }
 case 2:
 {
-double s,s0,v0,t,a;
+double s= 0.0;
+double s0= 0.0;
+double v0= 0.0;
+double t= 0.0;
+double a= 0.0;
 cout<<"enter s0, v0 , t and a values";
-cin>>s0>>v0>>t>>a;
+s=validateDouble(s);
+s0=validateDouble(s0);
+v0= validateDouble(v0);
+t= validateDouble(t);
+a= validateDouble(a);
 s = s0+(v0*t)+(1/2)*(a*t*t);
 cout<<"values of s is:"<<s;
 }
 case 3:
 {
-double v,v2,v0,a,s,s0;
+double v=0.0;
+double v2= 0.0;
+double v0= 0.0;
+double a= 0.0;
+double s0= 0.0;
+double s =0.0;
 cout<<"enter v0,a,s and s0 values";
-cin>>v0>>a>>s>>s0;
+v0=validateDouble(v0);
+a=validateDouble(a);
+s0= validateDouble(s0);
+s=validateDouble(s);
 v=((v0*v0)+((2*a)*(s-s0)));
 v2=v*v;
 cout<<"v2 values is : "<<v2;
@@ -94,9 +110,12 @@ break;
 }
 case 4:
 {
-double v_bar,v,v0;
+double v_bar;
+double v0= 0.0;
+double v= 0.0;
 cout<<"enter the values v and v0";
-cin>>v>>v0;
+v=validateDouble(v);
+v0= validateDouble(v0);
 v_bar=((1/2)*(v+v0));
 cout<<"v bar is equal to"<<v_bar;
 break;
@@ -113,7 +132,8 @@ case'n': //newtons second law
  double m=0.0;
  double a=0.0;
 cout <<"Enter m and a values\t";
-cin>>m>>a; 
+m=validateDouble(m);
+a=validateDouble(a); 
 double N = m*a;
 cout<<"The answer is "<<N;
 break;
@@ -124,7 +144,8 @@ case'w': // weight
  double m =0.0;
  double g =0.0;
 cout <<"Enter m and g values\t";
-cin>>m>>g; 
+m=validateDouble(m);
+g= validateDouble(g); 
 double W = m*g;
 cout<<"The weight is "<< W;
 break;
