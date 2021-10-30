@@ -61,11 +61,15 @@ num= validateInt(num);
 switch(num){
 case 1:
 {
-double v0,a,t,v;
+double v0= 0.0;
+double a= 0.0;
+double t= 0.0;
+double v= 0,0; 
 cout<<"enter v0, a and t \n";
 v0= validateDouble(v0);
 a= validateDouble(a);
 t= validateDouble(t);
+v= validateDouble(v);
 v=v0+(a*t);
 cout<<"v is equal to"<<v;
 break;
