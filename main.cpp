@@ -6,11 +6,10 @@
 #include <string>
 
 
-
 int main() 
 {
   string option = ""; //the option local to int main()
-  string color = "\x1b[" + to_string(32) + ";1m";
+  string color = "\x1b[" + to_string(45) + ";1m";
   string reset = "\x1b[0m";
 
  cout << "Hello! , please choose a letter:"<<endl;
@@ -20,14 +19,16 @@ int main()
   cout<< " w for weight "<<endl;
   cout<< " p for momentum "<<endl;
   cout<<" X to clear the screen "<<endl;
+
+
 char input;
-cin >> input;
+input = validateChar(input);
 switch (input)
 
 {
-case 'v':
+case 'v': //velocity(double ds,double dt) function
 {
-//velocity(double ds,double dt) function
+  
 double ds = 0.0;
 double dt =0.0;
 cout <<"Enter ds and dt values\t";
@@ -153,9 +154,10 @@ break;
 case'p': // momentum
 {
 double m =0.0;
- double v =0.0;
+double v =0.0;
 cout <<"Enter m and v values\t";
-cin>>m>>v; 
+m= validateDouble(m);
+v= validateDouble(v);
 double P = m*v;
 cout<<"The momentum is "<< P;
 break;
@@ -170,14 +172,14 @@ break;
 do
   {
     showMenu(); //call a menu void function here
-    cout << "Hello, please choose a letter: ";
+    cout << "Hello, please choose a letter: "<< endl;
       cout << color; //change text to green 
      //cin >> option; //getline(cin,option); //get the entire line
     option = validateString(option); 
-    cout << reset; //reset back to standard
-    handleOption(option); //call handleOption and pass the user option as an argument
+    cout << reset<< endl; //reset back to standard
+     //call handleOption and pass the user option as an argument
     
-  }while(option != "X" && option != "X"); //DeMorgan's Law!!! 
+  }while(option != "E" && option != "E"); //DeMorgan's Law!!! 
   cout << "\nGoodbye" << endl;
   return 0; 
 }
